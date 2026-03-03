@@ -1,4 +1,5 @@
 import Foundation
+import Security
 import SystemConfiguration
 
 let version = "0.4.0"
@@ -18,11 +19,9 @@ func main(_ args: [String]) {
         }
         port = _port
         flag = args[2] == "enable"
-    } else if args.count == 2 {
-        if args[1] == "version" {
-            print(version)
-            exit(EXIT_SUCCESS)
-        }
+    } else if args.count == 2 && args[1] == "version" {
+        print(version)
+        exit(EXIT_SUCCESS)
     } else {
         print("Usage: ProxyConfig <port> <enable/disable>")
         exit(EXIT_FAILURE)
@@ -38,36 +37,40 @@ func main(_ args: [String]) {
         exit(EXIT_FAILURE)
     }
     
-    guard authRef != nil else {
+    guard let authRef = authRef else {
         print("Error: No authorization has been granted to modify network configuration.")
         exit(EXIT_FAILURE)
     }
     
     if let prefRef = SCPreferencesCreateWithAuthorization(nil, "SpechtLite" as CFString, nil, authRef),
-        let sets = SCPreferencesGetValue(prefRef, kSCPrefNetworkServices) {
+        let sets = SCPreferencesGetValue(prefRef, kSCPrefNetworkServices) as? NSDictionary {
         
-        for key in sets.allKeys {
+        for rawKey in sets.allKeys {
+            guard let key = rawKey as? String else {
+                continue
+            }
+
             let dict = sets.object(forKey: key) as? NSDictionary
             let hardware = ((dict?["Interface"]) as? NSDictionary)?["Hardware"] as? String
             if hardware == "AirPort" || hardware == "Ethernet" {
                 let ip = flag ? "127.0.0.1" : ""
                 let enableInt = flag ? 1 : 0
                 
-                var proxySettings: [String:AnyObject] = [:]
-                proxySettings[kCFNetworkProxiesHTTPProxy as String] = ip as AnyObject
-                proxySettings[kCFNetworkProxiesHTTPEnable as String] = enableInt as AnyObject
-                proxySettings[kCFNetworkProxiesHTTPSProxy as String] = ip as AnyObject
-                proxySettings[kCFNetworkProxiesHTTPSEnable as String] = enableInt as AnyObject
-                proxySettings[kCFNetworkProxiesSOCKSProxy as String] = ip as AnyObject
-                proxySettings[kCFNetworkProxiesSOCKSEnable as String] = enableInt as AnyObject
+                var proxySettings: [String: Any] = [:]
+                proxySettings[kCFNetworkProxiesHTTPProxy as String] = ip
+                proxySettings[kCFNetworkProxiesHTTPEnable as String] = enableInt
+                proxySettings[kCFNetworkProxiesHTTPSProxy as String] = ip
+                proxySettings[kCFNetworkProxiesHTTPSEnable as String] = enableInt
+                proxySettings[kCFNetworkProxiesSOCKSProxy as String] = ip
+                proxySettings[kCFNetworkProxiesSOCKSEnable as String] = enableInt
                 if flag {
-                    proxySettings[kCFNetworkProxiesHTTPPort as String] = port as AnyObject
-                    proxySettings[kCFNetworkProxiesHTTPSPort as String] = port as AnyObject
-                    proxySettings[kCFNetworkProxiesSOCKSPort as String] = port + 1 as AnyObject
+                    proxySettings[kCFNetworkProxiesHTTPPort as String] = port
+                    proxySettings[kCFNetworkProxiesHTTPSPort as String] = port
+                    proxySettings[kCFNetworkProxiesSOCKSPort as String] = port + 1
                 } else {
-                    proxySettings[kCFNetworkProxiesHTTPPort as String] = nil
-                    proxySettings[kCFNetworkProxiesHTTPSPort as String] = nil
-                    proxySettings[kCFNetworkProxiesSOCKSPort as String] = nil
+                    proxySettings.removeValue(forKey: kCFNetworkProxiesHTTPPort as String)
+                    proxySettings.removeValue(forKey: kCFNetworkProxiesHTTPSPort as String)
+                    proxySettings.removeValue(forKey: kCFNetworkProxiesSOCKSPort as String)
                 }
                 proxySettings[kCFNetworkProxiesExceptionsList as String] = [
                     "192.168.0.0/16",
@@ -76,7 +79,7 @@ func main(_ args: [String]) {
                     "127.0.0.1",
                     "localhost",
                     "*.local"
-                    ] as AnyObject
+                    ]
                 
                 let path = "/\(kSCPrefNetworkServices)/\(key)/\(kSCEntNetProxies)"
                 SCPreferencesPathSetValue(prefRef, path as CFString, proxySettings as CFDictionary)
@@ -87,7 +90,7 @@ func main(_ args: [String]) {
         SCPreferencesApplyChanges(prefRef)
     }
     
-    AuthorizationFree(authRef!, AuthorizationFlags())
+    AuthorizationFree(authRef, [])
     
     exit(EXIT_SUCCESS)
 }

@@ -44,7 +44,7 @@ class ProfileManager {
     }
     
     static func openProfileFolder() {
-        NSWorkspace.shared().openFile(profileFolder)
+        NSWorkspace.shared.openFile(profileFolder)
     }
     
     static func reloadAllProfileFiles() {

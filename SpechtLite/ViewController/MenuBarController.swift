@@ -2,14 +2,13 @@ import Cocoa
 import Sparkle
 import ReactiveCocoa
 import ReactiveSwift
-import enum Result.NoError
 import CocoaLumberjackSwift
 
 class MenuBarController: NSObject, NSMenuDelegate {
     let barItem: NSStatusItem
     
     let profileAction: CocoaAction<NSMenuItem> = {
-        let action = Action<String, Void, NoError> { name in
+        let action = Action<String, Void, Never> { name in
             return SignalProducer { observer, _ in
                 ProfileManager.currentProfile.swap(name)
                 observer.sendCompleted()
@@ -21,7 +20,7 @@ class MenuBarController: NSObject, NSMenuDelegate {
     }()
     
     let stopProxyServerAction: CocoaAction<Any> = {
-        let action = Action<Void, Void, NoError> {
+        let action = Action<Void, Void, Never> {
             ProfileManager.currentProfile.swap(nil)
             return SignalProducer.empty
         }
@@ -29,7 +28,7 @@ class MenuBarController: NSObject, NSMenuDelegate {
     }()
     
     let openProfileFolderAction: CocoaAction<Any> = {
-        let action = Action<Void, Void, NoError> {
+        let action = Action<Void, Void, Never> {
             ProfileManager.openProfileFolder()
             return SignalProducer.empty
         }
@@ -37,7 +36,7 @@ class MenuBarController: NSObject, NSMenuDelegate {
     }()
     
     let reloadProfileAction: CocoaAction<Any> = {
-        let action = Action<Void, Void, NoError> {
+        let action = Action<Void, Void, Never> {
             ProfileManager.reloadAllProfileFiles()
             return SignalProducer.empty
         }
@@ -45,7 +44,7 @@ class MenuBarController: NSObject, NSMenuDelegate {
     }()
     
     let setAsSystemProxyAction: CocoaAction<Any> = {
-        let action = Action<Void, Void, NoError> {
+        let action = Action<Void, Void, Never> {
             ProxySettingManager.setAsSystemProxy.modify {
                 $0 = !$0
             }
@@ -55,13 +54,13 @@ class MenuBarController: NSObject, NSMenuDelegate {
     }()
     
     let copyShellCommandAction: CocoaAction<Any> = {
-        let action = Action<Void, Void, NoError> {
-            let pasteboard = NSPasteboard.general()
+        let action = Action<Void, Void, Never> {
+            let pasteboard = NSPasteboard.general
             pasteboard.clearContents()
             if let port = ProfileManager.currentProxyPort.value {
-                pasteboard.setString("export https_proxy=http://127.0.0.1:\(port);export http_proxy=http://127.0.0.1:\(port)", forType: NSStringPboardType)
+                pasteboard.setString("export https_proxy=http://127.0.0.1:\(port);export http_proxy=http://127.0.0.1:\(port)", forType: .string)
             } else {
-                pasteboard.setString("export https_proxy=;export http_proxy=", forType: NSStringPboardType)
+                pasteboard.setString("export https_proxy=;export http_proxy=", forType: .string)
             }
             return SignalProducer.empty
         }
@@ -69,7 +68,7 @@ class MenuBarController: NSObject, NSMenuDelegate {
     }()
     
     let allowClientFromLanAction: CocoaAction<Any> = {
-        let action = Action<Void, Void, NoError> {
+        let action = Action<Void, Void, Never> {
             ProfileManager.allowFromLan.modify {
                 $0 = !$0
             }
@@ -79,7 +78,7 @@ class MenuBarController: NSObject, NSMenuDelegate {
     }()
     
     let speedTestAction: CocoaAction<Any> = {
-        let action = Action<Void, Void, NoError> {
+        let action = Action<Void, Void, Never> {
             let t1 = Date().timeIntervalSince1970
             let proxySessionConfiguration = URLSessionConfiguration.ephemeral
             if ProfileManager.currentProxyPort.value != nil {
@@ -112,7 +111,7 @@ class MenuBarController: NSObject, NSMenuDelegate {
     }()
     
     let autostartAtLoginAction: CocoaAction<Any> = {
-        let action = Action<Void, Void, NoError> {
+        let action = Action<Void, Void, Never> {
             AutostartManager.autostartAtLogin.modify {
                 $0 = !$0
             }
@@ -122,7 +121,7 @@ class MenuBarController: NSObject, NSMenuDelegate {
     }()
     
     let useDevChannelAction: CocoaAction<Any> = {
-        let action = Action<Void, Void, NoError> {
+        let action = Action<Void, Void, Never> {
             UpdateManager.useDevChannel.modify {
                 $0 = !$0
             }
@@ -132,7 +131,7 @@ class MenuBarController: NSObject, NSMenuDelegate {
     }()
     
     let checkForUpdatesAction: CocoaAction<Any> = {
-        let action = Action<Any, Void, NoError> {
+        let action = Action<Any, Void, Never> {
             SUUpdater.shared().checkForUpdates($0)
             return SignalProducer.empty
         }
@@ -140,9 +139,9 @@ class MenuBarController: NSObject, NSMenuDelegate {
     }()
     
     let showLogAction: CocoaAction<Any> = {
-        let action = Action<Void, Void, NoError> {
-            if let logfile = (LoggerManager.logger as? DDFileLogger)?.logFileManager?.sortedLogFilePaths?.first {
-                NSWorkspace.shared().openFile(logfile)
+        let action = Action<Void, Void, Never> {
+            if let logfile = (LoggerManager.logger as? DDFileLogger)?.logFileManager.sortedLogFilePaths.first {
+                NSWorkspace.shared.openFile(logfile)
             }
             return SignalProducer.empty
         }
@@ -150,24 +149,24 @@ class MenuBarController: NSObject, NSMenuDelegate {
     }()
     
     let helpAction: CocoaAction<Any> = {
-        let action = Action<Void, Void, NoError> {
-            NSWorkspace.shared().open(URL(string: "https://github.com/zhuhaow/SpechtLite")!)
+        let action = Action<Void, Void, Never> {
+            NSWorkspace.shared.open(URL(string: "https://github.com/zhuhaow/SpechtLite")!)
             return SignalProducer.empty
         }
         return CocoaAction(action)
     }()
     
     let aboutAction: CocoaAction<Any> = {
-        let action = Action<Any, Void, NoError> {
-            NSApplication.shared().activate(ignoringOtherApps: true)
-            NSApplication.shared().orderFrontStandardAboutPanel($0)
+        let action = Action<Any, Void, Never> {
+            NSApplication.shared.activate(ignoringOtherApps: true)
+            NSApplication.shared.orderFrontStandardAboutPanel($0)
             return SignalProducer.empty
         }
         return CocoaAction(action) { $0 }
     }()
     
     let exitAction: CocoaAction<Any> = {
-        let action = Action<Any, Void, NoError> {
+        let action = Action<Any, Void, Never> {
             NSApp.terminate($0)
             return SignalProducer.empty
         }
@@ -175,9 +174,9 @@ class MenuBarController: NSObject, NSMenuDelegate {
     }()
     
     override init() {
-        let icon = NSImage(named: "StatusIcon")!
+        let icon = NSImage(named: NSImage.Name("StatusIcon"))!
         icon.isTemplate = true
-        barItem = NSStatusBar.system().statusItem(withLength: -1)
+        barItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
         barItem.image = icon
         barItem.menu = NSMenu()
         
@@ -206,7 +205,7 @@ class MenuBarController: NSObject, NSMenuDelegate {
         let proxyItem = NSMenuItem(title: "Set as system proxy", action: CocoaAction<Any>.selector, keyEquivalent: "")
         proxyItem.target = setAsSystemProxyAction
         if ProxySettingManager.setAsSystemProxy.value {
-            proxyItem.state = NSOnState
+            proxyItem.state = .on
         }
         menu.addItem(proxyItem)
         
@@ -215,7 +214,7 @@ class MenuBarController: NSObject, NSMenuDelegate {
         let lanItem = NSMenuItem(title: "Allow Clients From Lan", action: CocoaAction<Any>.selector, keyEquivalent: "")
         lanItem.target = allowClientFromLanAction
         if ProfileManager.allowFromLan.value {
-            lanItem.state = NSOnState
+            lanItem.state = .on
         }
         menu.addItem(lanItem)
         
@@ -226,14 +225,14 @@ class MenuBarController: NSObject, NSMenuDelegate {
         let autostartItem = NSMenuItem(title: "Autostart at login", action: CocoaAction<Any>.selector, keyEquivalent: "")
         autostartItem.target = autostartAtLoginAction
         if AutostartManager.autostartAtLogin.value {
-            autostartItem.state = NSOnState
+            autostartItem.state = .on
         }
         menu.addItem(autostartItem)
         
         let devItem = NSMenuItem(title: "Use dev channel", action: CocoaAction<Any>.selector, keyEquivalent: "")
         devItem.target = useDevChannelAction
         if UpdateManager.useDevChannel.value {
-            devItem.state = NSOnState
+            devItem.state = .on
         }
         menu.addItem(devItem)
         
@@ -252,7 +251,7 @@ class MenuBarController: NSObject, NSMenuDelegate {
         item.target = profileAction
         
         if running {
-            item.state = NSOnState
+            item.state = .on
         }
         
         return item

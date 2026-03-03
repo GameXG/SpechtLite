@@ -7,10 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3621B9551DFCDF570003ABB3 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3621B9521DFCDF570003ABB3 /* Result.framework */; };
 		3621B9561DFCDF570003ABB3 /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3621B9531DFCDF570003ABB3 /* ReactiveSwift.framework */; };
 		3621B9571DFCDF570003ABB3 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3621B9541DFCDF570003ABB3 /* ReactiveCocoa.framework */; };
-		3621B9591DFCDF610003ABB3 /* Result.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3621B9521DFCDF570003ABB3 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3621B95B1DFCDF610003ABB3 /* ReactiveSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3621B9531DFCDF570003ABB3 /* ReactiveSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3621B95D1DFCDF610003ABB3 /* ReactiveCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3621B9541DFCDF570003ABB3 /* ReactiveCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3621B9631DFD8BBD0003ABB3 /* ProxySettingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3621B9621DFD8BBD0003ABB3 /* ProxySettingManager.swift */; };
@@ -104,7 +102,6 @@
 				36A719811D5C5B9200DC35F5 /* CocoaLumberjack.framework in Embed Frameworks */,
 				36A7197F1D5C5B9200DC35F5 /* CocoaAsyncSocket.framework in Embed Frameworks */,
 				36A719871D5C5B9200DC35F5 /* lwip.framework in Embed Frameworks */,
-				3621B9591DFCDF610003ABB3 /* Result.framework in Embed Frameworks */,
 				36A7198F1D5C5B9200DC35F5 /* Sparkle.framework in Embed Frameworks */,
 				3621B95B1DFCDF610003ABB3 /* ReactiveSwift.framework in Embed Frameworks */,
 				36A719891D5C5B9200DC35F5 /* MMDB.framework in Embed Frameworks */,
@@ -122,7 +119,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		3621B9521DFCDF570003ABB3 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/Mac/Result.framework; sourceTree = "<group>"; };
 		3621B9531DFCDF570003ABB3 /* ReactiveSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveSwift.framework; path = Carthage/Build/Mac/ReactiveSwift.framework; sourceTree = "<group>"; };
 		3621B9541DFCDF570003ABB3 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/Mac/ReactiveCocoa.framework; sourceTree = "<group>"; };
 		3621B9621DFD8BBD0003ABB3 /* ProxySettingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProxySettingManager.swift; sourceTree = "<group>"; };
@@ -188,7 +184,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3621B9551DFCDF570003ABB3 /* Result.framework in Frameworks */,
 				3621B9561DFCDF570003ABB3 /* ReactiveSwift.framework in Frameworks */,
 				3621B9571DFCDF570003ABB3 /* ReactiveCocoa.framework in Frameworks */,
 				36A719801D5C5B9200DC35F5 /* CocoaLumberjack.framework in Frameworks */,
@@ -229,7 +224,6 @@
 				36A7197B1D5C5B9200DC35F5 /* Sparkle.framework */,
 				36A7197C1D5C5B9200DC35F5 /* tun2socks.framework */,
 				36A7197D1D5C5B9200DC35F5 /* Yaml.framework */,
-				3621B9521DFCDF570003ABB3 /* Result.framework */,
 				3621B9531DFCDF570003ABB3 /* ReactiveSwift.framework */,
 				3621B9541DFCDF570003ABB3 /* ReactiveCocoa.framework */,
 			);
@@ -640,7 +634,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = me.zhuhaow.osx.SpechtLite.LaunchHelper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -658,7 +652,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = me.zhuhaow.osx.SpechtLite.LaunchHelper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -716,7 +710,7 @@
 				GCC_WARN_UNUSED_LABEL = YES;
 				GCC_WARN_UNUSED_VALUE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -772,7 +766,7 @@
 				GCC_WARN_UNUSED_LABEL = YES;
 				GCC_WARN_UNUSED_VALUE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -795,7 +789,7 @@
 				OTHER_CODE_SIGN_FLAGS = "--deep";
 				PRODUCT_BUNDLE_IDENTIFIER = me.zhuhaow.osx.SpechtLite;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -816,7 +810,7 @@
 				OTHER_CODE_SIGN_FLAGS = "--deep";
 				PRODUCT_BUNDLE_IDENTIFIER = me.zhuhaow.osx.SpechtLite;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
