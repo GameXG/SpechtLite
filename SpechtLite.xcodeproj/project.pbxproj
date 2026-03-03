@@ -13,26 +13,12 @@
 		3621B95D1DFCDF610003ABB3 /* ReactiveCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3621B9541DFCDF570003ABB3 /* ReactiveCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3621B9631DFD8BBD0003ABB3 /* ProxySettingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3621B9621DFD8BBD0003ABB3 /* ProxySettingManager.swift */; };
 		36A719721D5C4B5600DC35F5 /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = 36A719701D5C4B5100DC35F5 /* dsa_pub.pem */; };
-		36A7197E1D5C5B9200DC35F5 /* CocoaAsyncSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36A719731D5C5B9200DC35F5 /* CocoaAsyncSocket.framework */; };
-		36A7197F1D5C5B9200DC35F5 /* CocoaAsyncSocket.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 36A719731D5C5B9200DC35F5 /* CocoaAsyncSocket.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		36A719801D5C5B9200DC35F5 /* CocoaLumberjack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36A719741D5C5B9200DC35F5 /* CocoaLumberjack.framework */; };
 		36A719811D5C5B9200DC35F5 /* CocoaLumberjack.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 36A719741D5C5B9200DC35F5 /* CocoaLumberjack.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		36A719821D5C5B9200DC35F5 /* CocoaLumberjackSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36A719751D5C5B9200DC35F5 /* CocoaLumberjackSwift.framework */; };
 		36A719831D5C5B9200DC35F5 /* CocoaLumberjackSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 36A719751D5C5B9200DC35F5 /* CocoaLumberjackSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		36A719861D5C5B9200DC35F5 /* lwip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36A719771D5C5B9200DC35F5 /* lwip.framework */; };
-		36A719871D5C5B9200DC35F5 /* lwip.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 36A719771D5C5B9200DC35F5 /* lwip.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		36A719881D5C5B9200DC35F5 /* MMDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36A719781D5C5B9200DC35F5 /* MMDB.framework */; };
-		36A719891D5C5B9200DC35F5 /* MMDB.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 36A719781D5C5B9200DC35F5 /* MMDB.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		36A7198A1D5C5B9200DC35F5 /* NEKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36A719791D5C5B9200DC35F5 /* NEKit.framework */; };
-		36A7198B1D5C5B9200DC35F5 /* NEKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 36A719791D5C5B9200DC35F5 /* NEKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		36A7198C1D5C5B9200DC35F5 /* Sodium.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36A7197A1D5C5B9200DC35F5 /* Sodium.framework */; };
-		36A7198D1D5C5B9200DC35F5 /* Sodium.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 36A7197A1D5C5B9200DC35F5 /* Sodium.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		36A7198E1D5C5B9200DC35F5 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36A7197B1D5C5B9200DC35F5 /* Sparkle.framework */; };
 		36A7198F1D5C5B9200DC35F5 /* Sparkle.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 36A7197B1D5C5B9200DC35F5 /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		36A719901D5C5B9200DC35F5 /* tun2socks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36A7197C1D5C5B9200DC35F5 /* tun2socks.framework */; };
-		36A719911D5C5B9200DC35F5 /* tun2socks.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 36A7197C1D5C5B9200DC35F5 /* tun2socks.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		36A719921D5C5B9200DC35F5 /* Yaml.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36A7197D1D5C5B9200DC35F5 /* Yaml.framework */; };
-		36A719931D5C5B9200DC35F5 /* Yaml.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 36A7197D1D5C5B9200DC35F5 /* Yaml.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		36A719BF1D5F0A9400DC35F5 /* PreferenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A719BE1D5F0A9400DC35F5 /* PreferenceManager.swift */; };
 		36A719DD1D6178E500DC35F5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A719DC1D6178E500DC35F5 /* AppDelegate.m */; };
 		36A719E01D6178E500DC35F5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A719DF1D6178E500DC35F5 /* main.m */; };
@@ -47,13 +33,10 @@
 		36B2ACE31DE0979C00BD2C3D /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B2ACE21DE0979C00BD2C3D /* Utils.swift */; };
 		36B2ACE51DE2EA4A00BD2C3D /* LoggerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B2ACE41DE2EA4A00BD2C3D /* LoggerManager.swift */; };
 		36B2ACE71DE33A5600BD2C3D /* UpdateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B2ACE61DE33A5600BD2C3D /* UpdateManager.swift */; };
-		36B2ACEA1DE355C600BD2C3D /* Resolver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36B2ACE91DE355C600BD2C3D /* Resolver.framework */; };
-		36B2ACEB1DE355C600BD2C3D /* Resolver.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 36B2ACE91DE355C600BD2C3D /* Resolver.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		36B6A3371E263BA3002B5B1D /* ProxyConfig in Resources */ = {isa = PBXBuildFile; fileRef = 36B6A3321E2635FE002B5B1D /* ProxyConfig */; };
 		36BA0BF31D599FF40074BEBF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BA0BF21D599FF40074BEBF /* AppDelegate.swift */; };
 		36BA0BF51D599FF40074BEBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36BA0BF41D599FF40074BEBF /* Assets.xcassets */; };
 		36BA0BF81D599FF40074BEBF /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36BA0BF61D599FF40074BEBF /* MainMenu.xib */; };
-		C83FB9621D753D3300718382 /* SPObserverFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83FB9611D753D3300718382 /* SPObserverFactory.swift */; };
 		C8A7E13D1D66FC8E00E713F5 /* install_proxy_helper.sh in Resources */ = {isa = PBXBuildFile; fileRef = C8A7E13B1D66FC8E00E713F5 /* install_proxy_helper.sh */; };
 		C8A7E13E1D66FC8E00E713F5 /* ProxyHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A7E13C1D66FC8E00E713F5 /* ProxyHelper.swift */; };
 /* End PBXBuildFile section */
@@ -100,17 +83,9 @@
 			dstSubfolderSpec = 10;
 			files = (
 				36A719811D5C5B9200DC35F5 /* CocoaLumberjack.framework in Embed Frameworks */,
-				36A7197F1D5C5B9200DC35F5 /* CocoaAsyncSocket.framework in Embed Frameworks */,
-				36A719871D5C5B9200DC35F5 /* lwip.framework in Embed Frameworks */,
 				36A7198F1D5C5B9200DC35F5 /* Sparkle.framework in Embed Frameworks */,
 				3621B95B1DFCDF610003ABB3 /* ReactiveSwift.framework in Embed Frameworks */,
-				36A719891D5C5B9200DC35F5 /* MMDB.framework in Embed Frameworks */,
-				36A7198D1D5C5B9200DC35F5 /* Sodium.framework in Embed Frameworks */,
-				36A719931D5C5B9200DC35F5 /* Yaml.framework in Embed Frameworks */,
-				36B2ACEB1DE355C600BD2C3D /* Resolver.framework in Embed Frameworks */,
-				36A719911D5C5B9200DC35F5 /* tun2socks.framework in Embed Frameworks */,
 				3621B95D1DFCDF610003ABB3 /* ReactiveCocoa.framework in Embed Frameworks */,
-				36A7198B1D5C5B9200DC35F5 /* NEKit.framework in Embed Frameworks */,
 				36A719831D5C5B9200DC35F5 /* CocoaLumberjackSwift.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -129,16 +104,9 @@
 		36A7196A1D5C4AB900DC35F5 /* bootstrap-if-needed */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "bootstrap-if-needed"; sourceTree = "<group>"; };
 		36A7196B1D5C4AB900DC35F5 /* publish_appcast */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = publish_appcast; sourceTree = "<group>"; };
 		36A719701D5C4B5100DC35F5 /* dsa_pub.pem */ = {isa = PBXFileReference; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
-		36A719731D5C5B9200DC35F5 /* CocoaAsyncSocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaAsyncSocket.framework; path = Carthage/Build/Mac/CocoaAsyncSocket.framework; sourceTree = "<group>"; };
 		36A719741D5C5B9200DC35F5 /* CocoaLumberjack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaLumberjack.framework; path = Carthage/Build/Mac/CocoaLumberjack.framework; sourceTree = "<group>"; };
 		36A719751D5C5B9200DC35F5 /* CocoaLumberjackSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaLumberjackSwift.framework; path = Carthage/Build/Mac/CocoaLumberjackSwift.framework; sourceTree = "<group>"; };
-		36A719771D5C5B9200DC35F5 /* lwip.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = lwip.framework; path = Carthage/Build/Mac/lwip.framework; sourceTree = "<group>"; };
-		36A719781D5C5B9200DC35F5 /* MMDB.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MMDB.framework; path = Carthage/Build/Mac/MMDB.framework; sourceTree = "<group>"; };
-		36A719791D5C5B9200DC35F5 /* NEKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NEKit.framework; path = Carthage/Build/Mac/NEKit.framework; sourceTree = "<group>"; };
-		36A7197A1D5C5B9200DC35F5 /* Sodium.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sodium.framework; path = Carthage/Build/Mac/Sodium.framework; sourceTree = "<group>"; };
 		36A7197B1D5C5B9200DC35F5 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = Carthage/Build/Mac/Sparkle.framework; sourceTree = "<group>"; };
-		36A7197C1D5C5B9200DC35F5 /* tun2socks.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = tun2socks.framework; path = Carthage/Build/Mac/tun2socks.framework; sourceTree = "<group>"; };
-		36A7197D1D5C5B9200DC35F5 /* Yaml.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Yaml.framework; path = Carthage/Build/Mac/Yaml.framework; sourceTree = "<group>"; };
 		36A719BE1D5F0A9400DC35F5 /* PreferenceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferenceManager.swift; sourceTree = "<group>"; };
 		36A719D91D6178E500DC35F5 /* SpechtLiteLaunchHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpechtLiteLaunchHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36A719DB1D6178E500DC35F5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -159,7 +127,6 @@
 		36B2ACE41DE2EA4A00BD2C3D /* LoggerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggerManager.swift; sourceTree = "<group>"; };
 		36B2ACE61DE33A5600BD2C3D /* UpdateManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateManager.swift; sourceTree = "<group>"; };
 		36B2ACE81DE34D8F00BD2C3D /* devappcast.xml.erb */ = {isa = PBXFileReference; lastKnownFileType = text; path = devappcast.xml.erb; sourceTree = "<group>"; };
-		36B2ACE91DE355C600BD2C3D /* Resolver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Resolver.framework; path = Carthage/Build/Mac/Resolver.framework; sourceTree = "<group>"; };
 		36B6A32D1E2635FE002B5B1D /* ProxyConfig.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ProxyConfig.xcodeproj; path = ProxyConfig/ProxyConfig.xcodeproj; sourceTree = "<group>"; };
 		36BA0BEF1D599FF40074BEBF /* SpechtLite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpechtLite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36BA0BF21D599FF40074BEBF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -167,7 +134,6 @@
 		36BA0BF71D599FF40074BEBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		36BA0BF91D599FF40074BEBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		36BA0BFF1D59A0510074BEBF /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
-		C83FB9611D753D3300718382 /* SPObserverFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPObserverFactory.swift; sourceTree = "<group>"; };
 		C8A7E13B1D66FC8E00E713F5 /* install_proxy_helper.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = install_proxy_helper.sh; sourceTree = "<group>"; };
 		C8A7E13C1D66FC8E00E713F5 /* ProxyHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProxyHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -187,15 +153,7 @@
 				3621B9561DFCDF570003ABB3 /* ReactiveSwift.framework in Frameworks */,
 				3621B9571DFCDF570003ABB3 /* ReactiveCocoa.framework in Frameworks */,
 				36A719801D5C5B9200DC35F5 /* CocoaLumberjack.framework in Frameworks */,
-				36A7197E1D5C5B9200DC35F5 /* CocoaAsyncSocket.framework in Frameworks */,
-				36A719861D5C5B9200DC35F5 /* lwip.framework in Frameworks */,
 				36A7198E1D5C5B9200DC35F5 /* Sparkle.framework in Frameworks */,
-				36A719881D5C5B9200DC35F5 /* MMDB.framework in Frameworks */,
-				36A7198C1D5C5B9200DC35F5 /* Sodium.framework in Frameworks */,
-				36A719921D5C5B9200DC35F5 /* Yaml.framework in Frameworks */,
-				36B2ACEA1DE355C600BD2C3D /* Resolver.framework in Frameworks */,
-				36A719901D5C5B9200DC35F5 /* tun2socks.framework in Frameworks */,
-				36A7198A1D5C5B9200DC35F5 /* NEKit.framework in Frameworks */,
 				36A719821D5C5B9200DC35F5 /* CocoaLumberjackSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -213,17 +171,9 @@
 		3621B9511DFCDF560003ABB3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				36B2ACE91DE355C600BD2C3D /* Resolver.framework */,
-				36A719731D5C5B9200DC35F5 /* CocoaAsyncSocket.framework */,
 				36A719741D5C5B9200DC35F5 /* CocoaLumberjack.framework */,
 				36A719751D5C5B9200DC35F5 /* CocoaLumberjackSwift.framework */,
-				36A719771D5C5B9200DC35F5 /* lwip.framework */,
-				36A719781D5C5B9200DC35F5 /* MMDB.framework */,
-				36A719791D5C5B9200DC35F5 /* NEKit.framework */,
-				36A7197A1D5C5B9200DC35F5 /* Sodium.framework */,
 				36A7197B1D5C5B9200DC35F5 /* Sparkle.framework */,
-				36A7197C1D5C5B9200DC35F5 /* tun2socks.framework */,
-				36A7197D1D5C5B9200DC35F5 /* Yaml.framework */,
 				3621B9531DFCDF570003ABB3 /* ReactiveSwift.framework */,
 				3621B9541DFCDF570003ABB3 /* ReactiveCocoa.framework */,
 			);
@@ -361,7 +311,6 @@
 				36BA0BF61D599FF40074BEBF /* MainMenu.xib */,
 				36B2ACDF1DE096AC00BD2C3D /* Opt.swift */,
 				C8A7E13C1D66FC8E00E713F5 /* ProxyHelper.swift */,
-				C83FB9611D753D3300718382 /* SPObserverFactory.swift */,
 				36B2ACE21DE0979C00BD2C3D /* Utils.swift */,
 			);
 			path = SpechtLite;
@@ -569,7 +518,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C8A7E13E1D66FC8E00E713F5 /* ProxyHelper.swift in Sources */,
-				C83FB9621D753D3300718382 /* SPObserverFactory.swift in Sources */,
 				36B2ACDE1DE095E400BD2C3D /* ProfileManager.swift in Sources */,
 				36A719EC1D617A4A00DC35F5 /* AutostartManager.swift in Sources */,
 				36B2ACE31DE0979C00BD2C3D /* Utils.swift in Sources */,

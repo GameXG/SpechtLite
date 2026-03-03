@@ -1,6 +1,5 @@
 import Foundation
 import CocoaLumberjack
-import NEKit
 
 class LoggerManager {
     static var logger: DDLogger!
@@ -13,7 +12,5 @@ class LoggerManager {
         logger.logFileManager.maximumNumberOfLogFiles = 1
         DDLog.add(logger, with: .info)
         self.logger = logger
-        
-        ObserverFactory.currentFactory = SPObserverFactory()
     }
 }
